@@ -9,8 +9,7 @@ const useStyles = makeStyles((theme) => ({
 		textAlign: "center",
 		fontSize: "80px",
 		color: "#fff",
-		animation: "glow 1s ease-in-out infinite alternate"
-		
+		animation: "glow 1s ease-in-out infinite alternate"		
 	}
 }))
 
