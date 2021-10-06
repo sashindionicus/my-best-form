@@ -7,6 +7,7 @@ import {PrimaryButton} from "./components/PrimaryButton";
 import {useForm} from "react-hook-form";
 import * as yup from 'yup';
 import {yupResolver} from "@hookform/resolvers/yup";
+import {useHistory} from "react-router-dom";
 
 
 const schema = yup.object().shape({
@@ -21,13 +22,14 @@ const schema = yup.object().shape({
 });
 
 export const Step1 = () => {
-	const { register, formState: { errors }, handleSubmit} = useForm({
+	const history = useHistory()
+	const { register, formState: { errors }, handleSubmit } = useForm({
 		mode: "onBlur",
 		resolver: yupResolver(schema),
 	})
 
 	const onSubmit = (data) => {
-		console.log(data)
+		history.push("/step2")
 	}
 
 
